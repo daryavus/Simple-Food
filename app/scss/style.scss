@@ -3,5 +3,59 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 60px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu{
+  display: flex;
+  &__list{
+    display: flex;
+    margin-right: 63px;
+  }
+  &__list-item:not(:last-child) {
+    margin-right: 45px;
+  }
+  &__list-link{
+    font-size: 18px;
+    line-height: 1;
+    transition: color 0.3s;
+    &:hover{
+      color: $accent
+    }
+  }
+  &__list-link--active{
+    color: $accent;
+  }
+}
+
+.user-nav{
+  display: flex;
+  margin-right: 13px;
+  &__link{
+    position: relative;
+  }
+  &__link:not(:last-child) {
+    margin-right: 35px;
+  }
+  &__num{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: -5px;
+    right: -10px;
+    font-size: 10px;
+    color: #fff;
+    line-height: 14px;
+    text-align: center
+  }
+}
 
 @import 'media';

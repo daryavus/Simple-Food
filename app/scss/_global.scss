@@ -1,3 +1,13 @@
 body {
+  background-color: #F9FAFF;
+  color: $default;
+  font-size: 20px;
+  @extend %rubik-normal;
+  font-weight: 400;
+}
 
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
