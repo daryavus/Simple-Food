@@ -12,8 +12,25 @@
   }
 }
 
+.logo{
+  border-radius: 5px;
+  text-decoration-skip-ink: none;
+  text-decoration: underline transparent;
+  transition: opacity 0.3s, box-shadow 0.3s;
+  &:focus{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.5;
+  }
+}
+
 .menu{
   display: flex;
+  align-items: center;
   &__list{
     display: flex;
     margin-right: 63px;
@@ -24,24 +41,67 @@
   &__list-link{
     font-size: 18px;
     line-height: 1;
-    transition: color 0.3s;
-    &:hover{
-      color: $accent
-    }
   }
   &__list-link--active{
     color: $accent;
   }
 }
 
+.animation-link{
+  border-radius: 5px;
+  text-decoration-skip-ink: none;
+  text-decoration: underline transparent;
+  transition: color 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+  &:focus{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:hover{
+    color: $accent;
+  }
+  &:active{
+    text-shadow: 2px 2px 5px 0 rgba(49, 53, 43, 0.5);
+  }
+}
+
 .user-nav{
   display: flex;
-  margin-right: 13px;
   &__link{
     position: relative;
+    width: 44px;
+    height: 44px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration-skip-ink: none;
+    text-decoration: underline transparent;
+    transition: background-color 0.3s, box-shadow 0.3s, stroke 0.3s;
   }
   &__link:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 10px;
+  }
+  &__link:focus{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: #fff2ed;
+  }
+  &__link:hover{
+    background-color: #ff7a50;
+  }
+  &__link:hover ellipse,
+  &__link:hover path,
+  &__link:hover span{
+    stroke: #fff;
+    background-color: #fff;
+    color: $accent;
+  }
+  &__link:active{
+    background-color: #fff2ed;
+  }
+  &__link:active ellipse,
+  &__link:active path,
+  &__link:active span{
+    stroke: #363853;
+    background-color: $accent;
+    color: #fff;
   }
   &__num{
     position: absolute;
@@ -49,12 +109,221 @@
     height: 14px;
     border-radius: 50%;
     background-color: $accent;
-    top: -5px;
-    right: -10px;
+    top: 7px;
+    right: 4px;
     font-size: 10px;
     color: #fff;
     line-height: 14px;
     text-align: center
+  }
+}
+
+.section{
+  padding-bottom: 120px;
+}
+
+.hero{
+  &__inner{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  }
+  &__content{
+    max-width: 450px;
+    padding: 156px 0;
+  }
+  &__title{
+    color: $title;
+  }
+  &__title,
+  &__subtitle{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 66px;
+    line-height: 1.3;
+  }
+  &__subtitle{
+    color: $accent;
+    margin-bottom: 20px;
+  }
+  &__text{
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__more{
+    margin-left: 34px;
+    text-decoration: underline;
+    line-height: 1.5;
+    transition: text-decoration 0.3s;
+    &:focus,
+    &:hover,
+    &:active{
+      text-decoration: none;
+    }
+  }
+  &__img{
+    max-width: 560px;
+    width: 100%;
+  }
+}
+
+.hero__btn{
+  padding: 12px 32px;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary{
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  background-color: $accent;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+  &:focus{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: #fff2ed;
+    color: $accent;
+  }
+  &:hover{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: #fff;
+    color: $accent;
+  }
+  &:active{
+    color: $accent;
+    background-color: #fff2ed;
+  }
+}
+
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  &__logo{
+    display: block;
+    margin-bottom: 30px;
+  }
+  &__form-field{
+    border-radius: 5px;
+    width: 200px;
+    height: 44px;
+    margin-bottom: 12px;
+    border:none;
+    padding: 13px 15px;
+    font-size: 14px;
+    line-height: 1.3;
+    &::placeholder{
+      color: #C2C2C2;
+    }
+    &:focus{
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+    &:hover::placeholder{
+      color: $title;
+    }
+  }
+  &__form-btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 13px 38px;
+    letter-spacing: normal;
+    &:focus path,
+    &:hover path,
+    &:active path{
+      fill: $accent;
+    }
+  }
+  &__items{
+    column-count: 3;
+  }
+  &__item {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+  &__contacts-item{
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 15px;
+  }
+  &__contacts-link{
+    position: relative;
+    padding-left: 31px;
+  }
+  &__contacts-link::before{
+    content: '';
+    background-position: center;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+  }
+  &__contacts-link--location::before{
+    background-image: url('../images/contacts/location.svg');
+  }
+  &__contacts-link--calling::before{
+    background-image: url('../images/contacts/calling.svg');
+  }
+  &__contacts-link--message::before{
+    background-image: url('../images/contacts/message.svg');
+  }
+}
+
+.social-media{
+  display: flex;
+  gap: 13px;
+  &__item{
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    transition: background-color 0.3s, box-shadow 0.3s, fill 0.3s;
+    &:focus{
+      background-color: #FFF2ED;
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
+    &:hover{
+      background-color: $accent;
+    }
+    &:hover path{
+      fill: #fff;
+    }
+    &:active{
+      background-color: #FFF2ED;
+      border: none;
+    }
+    &:active path{
+      fill: $accent;
+    }
+  }
+  &__link{
+    position: relative;
+    &--facebook{
+      top: 9px;
+    }
+    &--twitter{
+      top: 8px;
+      left: 1px;
+    }
+    &--instagram{
+      top: 9px;
+    }
+  }
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  &__text{
+    font-size: 14px;
   }
 }
 
