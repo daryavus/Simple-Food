@@ -59,7 +59,7 @@
     color: $accent;
   }
   &:active{
-    text-shadow: 2px 2px 5px 0 rgba(49, 53, 43, 0.5);
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
 }
 
@@ -220,13 +220,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    &--active{
-      color: #fff;
-      background-color: $accent;
-    }
-    &--active path{
-      fill: #fff;
-    }
     &:focus{
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
     }
@@ -291,6 +284,15 @@
       text-decoration: none;
     }
   }
+}
+
+.mixitup-control-active{
+  color: #fff;
+  background-color: $accent;
+}
+
+.mixitup-control-active path{
+  fill: #fff;
 }
 
 .footer-top{
