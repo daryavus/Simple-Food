@@ -1,13 +1,27 @@
-$accent: #FF6838;
-$default: #31352B;
+$accent: #ff6838;
+$default: #31352b;
 $title: #363853;
+$bgbody: #F9FAFF;
+$bgdefault: #fff;
+$border: #C2C2C2;
+$smbg: #ECECEC;
+$bg: #fff2ed;
+$bgactive: #ff7a50;
+$delivery: #00AAFF;
+$shops: #FF2222;
+$arrows: #ffae94;
 
-%rubik-normal{
+%rubik-300{
   font-family: 'Rubik', sans-serif;
-  font-style: normal;
+  font-weight: 300;
 }
 
-%rubik-italic{
+%rubik-400{
   font-family: 'Rubik', sans-serif;
-  font-style: italic;
+  font-weight: 400;
+}
+
+%rubik-500{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
 }
